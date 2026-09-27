@@ -115,9 +115,27 @@ await check('All 27 governorates are offered, and one without listed areas can s
   await p.goto(BASE + '#/b3d'); await on(p, 'B3d');
   const govs = await p.$$eval('#s-gov option', (o) => o.map((x) => x.value));
   assert(govs.length === 27, 'governorates offered: ' + govs.length);
-  await p.selectOption('#s-gov', 'alexandria'); await p.waitForTimeout(200);
-  assert((await store(p, 'return m.state.signup.area')) === 'gov-alexandria', 'Alexandria not selected as the area');
+  await p.selectOption('#s-gov', 'luxor'); await p.waitForTimeout(200);
+  assert((await store(p, 'return m.state.signup.area')) === 'gov-luxor', 'Luxor not selected as the area');
   await tap(p, '[data-to="B4"]'); await on(p, 'B4');
+});
+
+await check('Cairo, Giza and Alexandria have full area lists, and compounds follow the governorate', async () => {
+  const p = await page({ geo: false });
+  await p.goto(BASE + '#/b3d'); await on(p, 'B3d');
+  await p.selectOption('#s-gov', 'cairo'); await p.waitForTimeout(200);
+  const cairo = await p.$$eval('#s-area option', (o) => o.map((x) => x.value));
+  assert(cairo.includes('Zamalek') && cairo.includes('Heliopolis') && cairo.length > 30, 'Cairo areas: ' + cairo.length);
+  const cc = await p.$$eval('#s-compound option', (o) => o.map((x) => x.value));
+  assert(cc.includes('Mivida'), 'Mivida missing for Cairo');
+  await p.selectOption('#s-gov', 'giza'); await p.waitForTimeout(200);
+  const gc = await p.$$eval('#s-compound option', (o) => o.map((x) => x.value));
+  assert(gc.includes('New Giza') && !gc.includes('Mivida'), 'Giza compounds wrong');
+  await p.selectOption('#s-area', 'Imbaba'); await p.selectOption('#s-compound', 'New Giza');
+  assert((await store(p, 'return m.state.signup.compound')) === 'New Giza', 'compound not saved');
+  await p.selectOption('#s-gov', 'alexandria'); await p.waitForTimeout(200);
+  const alex = await p.$$eval('#s-area option', (o) => o.length);
+  assert(alex > 40, 'Alexandria areas: ' + alex);
 });
 
 await check('Location denied shows the K3 state and falls through to the manual area picker', async () => {

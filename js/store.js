@@ -1,6 +1,8 @@
 // One in-memory store, seeded from content.json and reset on reload.
 // No localStorage, no cookies, no server.
 import content from './data/content.js';
+import MORE_AREAS from './data/areas.js';
+import COMPOUND_LIST from './data/compounds.js';
 
 // Which feed filter each dish belongs to. The categories are the ones on the
 // E1 and B4 boards; the mapping is a plain reading of each dish.
@@ -75,9 +77,12 @@ const AREA_CENTRE = {
   Maadi: [29.9602, 31.2569], 'Sheikh Zayed': [30.0444, 30.9776], '6th of October': [29.9285, 30.9188], 'New Cairo': [30.0301, 31.4731],
 };
 
-const LISTED = [...content.areas_near, ...content.areas_more].map((a) => ({
-  id: a.en, en: a.en, ar: a.ar, km: a.km_from_club, gov: AREA_GOV[a.en] || 'giza', centre: AREA_CENTRE[a.en],
-}));
+const LISTED = [
+  ...[...content.areas_near, ...content.areas_more].map((a) => ({
+    id: a.en, en: a.en, ar: a.ar, km: a.km_from_club, gov: AREA_GOV[a.en] || 'giza', centre: AREA_CENTRE[a.en],
+  })),
+  ...Object.entries(MORE_AREAS).flatMap(([gov, list]) => list.map(([en, ar, lat, lon]) => ({ id: en, en, ar, km: null, gov, centre: [lat, lon] }))),
+];
 // The sample data only lists areas in Giza and Cairo. Every other governorate
 // is offered as a single area of its own name, so anyone in Egypt can enter.
 export const AREAS = [
@@ -85,6 +90,13 @@ export const AREAS = [
   ...GOVERNORATES.filter((g) => !LISTED.some((a) => a.gov === g.id))
     .map((g) => ({ id: 'gov-' + g.id, en: g.en, ar: g.ar, km: null, gov: g.id, centre: g.centre, wholeGov: true })),
 ];
+// Areas in a governorate, in alphabetical order for the current language.
+export const areasIn = (gov) => AREAS.filter((a) => a.gov === gov)
+  .sort((a, b) => (state.lang === 'ar' ? a.ar.localeCompare(b.ar, 'ar') : a.en.localeCompare(b.en, 'en')));
+export const COMPOUNDS = Object.entries(COMPOUND_LIST).flatMap(([gov, list]) => list.map(([en, ar]) => ({ id: en, en, ar, gov })));
+export const compoundsIn = (gov) => COMPOUNDS.filter((c) => c.gov === gov)
+  .sort((a, b) => (state.lang === 'ar' ? a.ar.localeCompare(b.ar, 'ar') : a.en.localeCompare(b.en, 'en')));
+export const compoundById = (id) => COMPOUNDS.find((c) => c.id === id) || null;
 export const areaById = (id) => AREAS.find((a) => a.id === id) || null;
 export const govById = (id) => GOVERNORATES.find((g) => g.id === id) || null;
 
@@ -114,7 +126,7 @@ function seed() {
     // The person holding the phone, as a cook going through B1 to B6.
     signup: {
       phone: '', verified: false, code: '', name: '', photo: null, photoSize: 0, area: null, gov: null, club: 'shooting',
-      pinConfirmed: false, dish: '', dishPhoto: null, dishPhotoSize: 0, story: '', category: 'mains',
+      pinConfirmed: false, compound: 'none', dish: '', dishPhoto: null, dishPhotoSize: 0, story: '', category: 'mains',
       nominatedBy: null,
     },
     myCookId: null,

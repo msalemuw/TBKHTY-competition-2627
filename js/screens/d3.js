@@ -23,7 +23,9 @@ export default {
     const answered = 2 + (k.radius ? 1 : 0) + Object.values(k.later).filter(Boolean).length;
     const pct = Math.round((answered / 7) * 100);
     const r = RADII.find((x) => x[0] === k.radius);
-    const covered = r && r[2] ? AREAS.filter((a) => a.id !== area.id && a.centre && km(a.centre, area.centre) <= r[2]).map((a) => LO(a)) : [];
+    const near = r && r[2] ? AREAS.filter((a) => a.id !== area.id && a.centre && !a.wholeGov && km(a.centre, area.centre) <= r[2])
+      .sort((a, b) => km(a.centre, area.centre) - km(b.centre, area.centre)) : [];
+    const covered = near.slice(0, 5).map((a) => LO(a)).concat(near.length > 5 ? ['…'] : []);
     const reach = !r ? '' : r[2] === 0 ? t('d3.reachOnly', { area: { en: area.en, ar: area.ar } })
       : t('d3.reach', { range: { en: raw(r[1], 'en'), ar: raw(r[1], 'ar') }, area: { en: area.en, ar: area.ar }, list: covered.join(', ') || '—' });
     const done = (q, a, u) => `<div class="card" style="padding:11px"><div class="row" style="align-items:flex-start;gap:10px"><span class="tick" style="width:22px;height:22px">${icon('check', { size: 14, sw: 3, color: 'var(--c-navy)' })}</span>

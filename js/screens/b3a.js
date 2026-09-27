@@ -2,7 +2,7 @@
 // the whole controlled list, and an escape hatch for anything missing.
 import { t, ta, alt, LO, isAr, esc } from '../i18n.js';
 import { icon, appBar, btn } from '../ui.js';
-import { state, AREAS, GOVERNORATES, areaById, govById } from '../store.js';
+import { state, AREAS, GOVERNORATES, areaById, govById, areasIn } from '../store.js';
 
 let ui = null;
 let query = '';
@@ -17,7 +17,7 @@ export default {
     const q = query.trim().toLowerCase();
     const list = q
       ? AREAS.filter((a) => a.en.toLowerCase().includes(q) || a.ar.includes(query.trim()))
-      : AREAS.filter((a) => a.gov === ui.gov);
+      : areasIn(ui.gov);
     const gov = govById(ui.gov);
     const area = areaById(ui.area);
     const selGov = govById(area.gov);

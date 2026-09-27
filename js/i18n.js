@@ -332,6 +332,8 @@ export const S = {
   'b3d.title': { en: 'Your area and club', ar: 'منطقتك وناديك' },
   'b3d.read': { en: 'We read your pin as {area}. Change it below if that is wrong.', ar: 'قرينا الدبوس على {area}. غيّرها تحت لو مش صح.' },
   'b3d.manual': { en: 'Pick your governorate and area below.', ar: null }, // TODO(ar)
+  'b3d.compound': { en: 'Compound', ar: null }, // TODO(ar)
+  'b3d.noCompound': { en: 'Not in a compound', ar: null }, // TODO(ar)
   'b3d.browse': { en: 'Browse the full list or add a compound', ar: null }, // TODO(ar)
   'b3d.club': { en: 'Your club', ar: 'ناديك · اختياري' },
   'b3d.clubNote': { en: 'Separate from where you live. Members and neighbours both compete.', ar: 'مستقل عن مكان سكنك. الأعضاء والجيران بيتنافسوا.' },

@@ -3,7 +3,7 @@
 import { ICONS, TRIS } from './icons-data.js';
 import { DISH_ART, AVATAR_ART, BADGE_ART } from './art-data.js';
 import { t, ta, alt, raw, esc, sub, L, LO, isAr, otherLang, has } from './i18n.js';
-import { state, rankOf, votingOpen, edition, AREAS, GOVERNORATES } from './store.js';
+import { state, rankOf, votingOpen, edition, AREAS, GOVERNORATES, areasIn } from './store.js';
 import { href } from './router.js';
 
 // ---------- Icons ----------
@@ -308,7 +308,7 @@ export function wireCode(root, id, onChange) {
 // Governorate and area, both required, from the controlled list only.
 export function govAreaFields(prefix, gov, area, { side = false } = {}) {
   const g = gov || (AREAS.find((a) => a.id === area) || {}).gov || 'giza';
-  const areas = AREAS.filter((a) => a.gov === g);
+  const areas = areasIn(g);
   const govSel = selectField({ id: prefix + '-gov', key: 'e5.gov', value: g, required: true, options: GOVERNORATES.map((x) => ({ value: x.id, label: LO(x) })) });
   const areaSel = selectField({ id: prefix + '-area', key: 'e5.area', value: area || '', required: true,
     options: [{ value: '', label: '—' }, ...areas.map((x) => ({ value: x.id, label: LO(x) }))] });

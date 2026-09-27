@@ -1,0 +1,661 @@
+{
+ "A0": [
+  {
+   "label": "I cook",
+   "to": "B1"
+  },
+  {
+   "label": "I want to vote",
+   "to": "E1"
+  },
+  {
+   "label": "I know a cook",
+   "to": "C1"
+  },
+  {
+   "label": "See the rankings",
+   "to": "A1"
+  },
+  {
+   "label": "How it works",
+   "to": "A3"
+  }
+ ],
+ "A1": [
+  {
+   "label": "Find a cook",
+   "to": "E8"
+  },
+  {
+   "label": "How the competition works",
+   "to": "A3"
+  },
+  {
+   "label": "Vote for your favourite cook",
+   "to": "E1"
+  },
+  {
+   "label": "Sign up as a cook to compete",
+   "to": "B1"
+  },
+  {
+   "label": "Nominate a cook you know",
+   "to": "C1"
+  },
+  {
+   "label": "New here? How the competition works",
+   "to": "A3"
+  },
+  {
+   "label": "Any cook in the top 3",
+   "to": "E2"
+  },
+  {
+   "label": "Full leaderboard",
+   "to": "F1"
+  },
+  {
+   "label": "Area titles",
+   "to": "J2"
+  },
+  {
+   "label": "Any competition card",
+   "to": "A2"
+  }
+ ],
+ "A2": [
+  {
+   "label": "All competitions",
+   "to": "A1"
+  },
+  {
+   "label": "Vote in this edition",
+   "to": "E1"
+  },
+  {
+   "label": "How the competition works",
+   "to": "A3"
+  },
+  {
+   "label": "Nominate a cook you know",
+   "to": "C1"
+  },
+  {
+   "label": "See all 14 competitors",
+   "to": "F1"
+  }
+ ],
+ "A3": [
+  {
+   "label": "Back",
+   "to": "A1"
+  },
+  {
+   "label": "Sign up as a cook to compete",
+   "to": "B1"
+  },
+  {
+   "label": "Just here to vote? Start voting",
+   "to": "E1"
+  }
+ ],
+ "B1": [
+  {
+   "label": "Back",
+   "to": "A1"
+  },
+  {
+   "label": "Enter now",
+   "to": "B2"
+  },
+  {
+   "label": "Prefer help? Send us your entry on WhatsApp",
+   "to": "B2"
+  }
+ ],
+ "B2": [
+  {
+   "label": "Back",
+   "to": "B1"
+  },
+  {
+   "label": "Continue",
+   "to": "B3"
+  }
+ ],
+ "B3": [
+  {
+   "label": "Back",
+   "to": "B2"
+  },
+  {
+   "label": "Move pin",
+   "to": "B3b"
+  },
+  {
+   "label": "Continue",
+   "to": "B3d"
+  }
+ ],
+ "B3a": [
+  {
+   "label": "Back",
+   "to": "B3d"
+  },
+  {
+   "label": "Confirm Giza · Mohandessin",
+   "to": "B3d"
+  }
+ ],
+ "B3b": [
+  {
+   "label": "Back",
+   "to": "B3"
+  },
+  {
+   "label": "Confirm this pin",
+   "to": "B3"
+  },
+  {
+   "label": "Cancel",
+   "to": "B3"
+  }
+ ],
+ "B3d": [
+  {
+   "label": "Back",
+   "to": "B3"
+  },
+  {
+   "label": "Browse the full list or add a compound",
+   "to": "B3a"
+  },
+  {
+   "label": "How the two rankings work",
+   "to": "J1"
+  },
+  {
+   "label": "Continue",
+   "to": "B4"
+  }
+ ],
+ "B4": [
+  {
+   "label": "Back",
+   "to": "B3d"
+  },
+  {
+   "label": "Continue",
+   "to": "B5"
+  }
+ ],
+ "B5": [
+  {
+   "label": "Back",
+   "to": "B4"
+  },
+  {
+   "label": "Edit",
+   "to": "B4"
+  },
+  {
+   "label": "Submit my entry",
+   "to": "B6"
+  }
+ ],
+ "B6": [
+  {
+   "label": "Get your first votes",
+   "to": "D2"
+  },
+  {
+   "label": "Go to my dashboard",
+   "to": "D1"
+  }
+ ],
+ "C1": [
+  {
+   "label": "Back",
+   "to": "A1"
+  },
+  {
+   "label": "My nominations",
+   "to": "C3"
+  },
+  {
+   "label": "See all four rungs",
+   "to": "C3"
+  },
+  {
+   "label": "Nominate her",
+   "to": "C2"
+  }
+ ],
+ "C2": [
+  {
+   "label": "Accept my nomination",
+   "to": "B2"
+  }
+ ],
+ "C3": [
+  {
+   "label": "Back",
+   "to": "A1"
+  },
+  {
+   "label": "Any cook I nominated",
+   "to": "E2"
+  },
+  {
+   "label": "Share this cook's entry",
+   "to": "D2"
+  },
+  {
+   "label": "Nominate another cook",
+   "to": "C1"
+  }
+ ],
+ "D1": [
+  {
+   "label": "Share now to close the gap",
+   "to": "D2"
+  },
+  {
+   "label": "Share to get votes",
+   "to": "D2"
+  },
+  {
+   "label": "Your season so far",
+   "to": "H3"
+  },
+  {
+   "label": "My kitchen",
+   "to": "D3"
+  },
+  {
+   "label": "Tasting day",
+   "to": "D4"
+  }
+ ],
+ "D2": [
+  {
+   "label": "Back",
+   "to": "D1"
+  }
+ ],
+ "D3": [
+  {
+   "label": "Back",
+   "to": "D1"
+  },
+  {
+   "label": "My entry",
+   "to": "D1"
+  },
+  {
+   "label": "Tasting day",
+   "to": "D4"
+  }
+ ],
+ "D4": [
+  {
+   "label": "Back",
+   "to": "D1"
+  },
+  {
+   "label": "My entry",
+   "to": "D1"
+  },
+  {
+   "label": "My kitchen",
+   "to": "D3"
+  }
+ ],
+ "E1": [
+  {
+   "label": "Find a cook",
+   "to": "E8"
+  },
+  {
+   "label": "Change edition",
+   "to": "A1"
+  },
+  {
+   "label": "Any entry card",
+   "to": "E2"
+  },
+  {
+   "label": "Me",
+   "to": "E7"
+  }
+ ],
+ "E2": [
+  {
+   "label": "Back",
+   "to": "E1"
+  },
+  {
+   "label": "Vote for Amira",
+   "to": "E3"
+  }
+ ],
+ "E3": [
+  {
+   "label": "×",
+   "to": "E2"
+  },
+  {
+   "label": "Confirm my vote",
+   "to": "E4"
+  },
+  {
+   "label": "Not now",
+   "to": "E2"
+  }
+ ],
+ "E4": [
+  {
+   "label": "Answer them",
+   "to": "E5"
+  },
+  {
+   "label": "Share to help her win",
+   "to": "D2"
+  },
+  {
+   "label": "Vote again tomorrow",
+   "to": "E6"
+  }
+ ],
+ "E5": [
+  {
+   "label": "Back",
+   "to": "E4"
+  },
+  {
+   "label": "Save and finish",
+   "to": "E7"
+  }
+ ],
+ "E6": [
+  {
+   "label": "Back",
+   "to": "E1"
+  },
+  {
+   "label": "Share instead to help Amira",
+   "to": "D2"
+  }
+ ],
+ "E8": [
+  {
+   "label": "Back",
+   "to": "A1"
+  },
+  {
+   "label": "Any search result",
+   "to": "E2"
+  },
+  {
+   "label": "Vote button on a result",
+   "to": "E3"
+  },
+  {
+   "label": "Vote",
+   "to": "E1"
+  },
+  {
+   "label": "Me",
+   "to": "E7"
+  }
+ ],
+ "E7": [
+  {
+   "label": "Back",
+   "to": "E1"
+  },
+  {
+   "label": "You nominated 3 cooks",
+   "to": "C3"
+  },
+  {
+   "label": "Your season so far",
+   "to": "H4"
+  },
+  {
+   "label": "Vote",
+   "to": "E1"
+  },
+  {
+   "label": "Find a cook",
+   "to": "E8"
+  }
+ ],
+ "F1": [
+  {
+   "label": "Back",
+   "to": "A1"
+  },
+  {
+   "label": "Club vs club",
+   "to": "F2"
+  },
+  {
+   "label": "Final results",
+   "to": "H1"
+  }
+ ],
+ "F2": [
+  {
+   "label": "Back",
+   "to": "F1"
+  },
+  {
+   "label": "Help Shooting Club lead the city",
+   "to": "D2"
+  }
+ ],
+ "G1": [
+  {
+   "label": "Vote for this dish",
+   "to": "G2"
+  }
+ ],
+ "G2": [
+  {
+   "label": "Back to the leaderboard",
+   "to": "F1"
+  }
+ ],
+ "G3": [],
+ "H1": [
+  {
+   "label": "See the winner's page",
+   "to": "H2"
+  }
+ ],
+ "H2": [
+  {
+   "label": "See them on her profile",
+   "to": "J3"
+  },
+  {
+   "label": "Share the winner card",
+   "to": "D2"
+  }
+ ],
+ "H3": [
+  {
+   "label": "Back",
+   "to": "A1"
+  },
+  {
+   "label": "Finish the last 3 questions",
+   "to": "D3"
+  },
+  {
+   "label": "Share your final result",
+   "to": "F2"
+  }
+ ],
+ "H4": [
+  {
+   "label": "Back",
+   "to": "E1"
+  },
+  {
+   "label": "You nominated 3 cooks",
+   "to": "C3"
+  }
+ ],
+ "J1": [
+  {
+   "label": "Back",
+   "to": "A1"
+  }
+ ],
+ "J2": [
+  {
+   "label": "Back",
+   "to": "J1"
+  },
+  {
+   "label": "Invite 2 more cooks to unlock",
+   "to": "C1"
+  }
+ ],
+ "J3": [
+  {
+   "label": "Back",
+   "to": "J2"
+  },
+  {
+   "label": "One of her titles is challenged",
+   "to": "J4"
+  }
+ ],
+ "J4": [
+  {
+   "label": "Back",
+   "to": "D1"
+  },
+  {
+   "label": "Defend my title",
+   "to": "D2"
+  },
+  {
+   "label": "See the area board",
+   "to": "J2"
+  }
+ ],
+ "J5": [
+  {
+   "label": "Share my title card",
+   "to": "D2"
+  },
+  {
+   "label": "See it on my profile",
+   "to": "J3"
+  }
+ ],
+ "I1": [],
+ "AR1": [
+  {
+   "label": "دوّر على طباخ",
+   "to": "E8"
+  },
+  {
+   "label": "إزاي المسابقة شغالة",
+   "to": "A3"
+  },
+  {
+   "label": "Vote for your favourite cook",
+   "to": "E1"
+  },
+  {
+   "label": "Sign up as a cook to compete",
+   "to": "B1"
+  },
+  {
+   "label": "Nominate a cook you know",
+   "to": "C1"
+  },
+  {
+   "label": "أول مرة؟ إزاي المسابقة شغالة",
+   "to": "A3"
+  },
+  {
+   "label": "Any cook in the top 3",
+   "to": "E2"
+  },
+  {
+   "label": "الترتيب الكامل",
+   "to": "F1"
+  },
+  {
+   "label": "الألقاب",
+   "to": "J2"
+  },
+  {
+   "label": "Any competition card",
+   "to": "A2"
+  }
+ ],
+ "AR2": [
+  {
+   "label": "Back",
+   "to": "B2"
+  },
+  {
+   "label": "حرّك الدبوس",
+   "to": "B3b"
+  },
+  {
+   "label": "Continue",
+   "to": "B3d"
+  }
+ ],
+ "AR3": [
+  {
+   "label": "دوّر على طباخ",
+   "to": "E8"
+  },
+  {
+   "label": "غيّر",
+   "to": "AR1"
+  },
+  {
+   "label": "Vote button on a card",
+   "to": "E3"
+  },
+  {
+   "label": "صوّت",
+   "to": "E1"
+  },
+  {
+   "label": "دوّر",
+   "to": "E8"
+  },
+  {
+   "label": "حسابي",
+   "to": "E7"
+  }
+ ],
+ "K1": [],
+ "K2": [],
+ "K3": [
+  {
+   "label": "Invite 2 more cooks to unlock",
+   "to": "C1"
+  },
+  {
+   "label": "Invite 1 more cook to unlock",
+   "to": "C1"
+  },
+  {
+   "label": "See the results",
+   "to": "H1"
+  }
+ ],
+ "M1": []
+}

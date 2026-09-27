@@ -1,0 +1,38 @@
+/*
+  Secondary tints and lines that the reference boards use alongside the core
+  tokens in tokens.css. Each value is copied from the reference HTML; none is
+  invented. Screens use these variables, never the hex values.
+*/
+:root {
+  --c-gold-text: #8A6420;
+  --c-gold-bg: #FBF2E1;
+  --c-gold-line: #EFDFBE;
+  --c-coral-line: #F6D8D0;
+  --c-chip-bg: #F1EEE7;
+  --c-chip-line: #E2DED4;
+  --c-track: #E9E6DE;
+  --c-track-2: #EDEAE2;
+  --c-step-off: #E4E0D7;
+  --c-dot: #DCD8CF;
+  --c-disabled: #A9A396;
+  --c-locked-bg: #F6F4EF;
+  --c-locked-line: #EBE7DE;
+  --c-locked-fill: #C9C3B5;
+  --c-img-bg: #EAE0D0;
+  --c-navy-2: #46525F;
+  --c-grip: #DDD9D0;
+  --c-mint: #7FD8C4;
+  --c-photo-slot: #23303B;
+  --c-slate-bg: #EDEFF2;
+  --c-link-hover: #07614F;
+
+  /* Type floors. Latin never below 10px, Arabic never below 11px. */
+  --fs-10: 10px;
+  --fs-105: 10.5px;
+}
+[lang="ar"] {
+  --fs-10: 11px;
+  --fs-105: 11px;
+}
+/* Arabic set inside smaller English text never drops below its 11px floor. */
+[lang="ar"]:not(html) { font-size: max(1em, 11px); }

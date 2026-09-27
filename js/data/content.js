@@ -1,0 +1,493 @@
+// Generated from spec/content.json. The only dataset the demo uses.
+export default {
+ "edition": {
+  "club": "Shooting Club",
+  "club_ar": "نادي الصيد",
+  "event": "Friday 2 October · 6:00 PM",
+  "event_ar": "الجمعة 2 أكتوبر · 6 مساءً",
+  "venue": "Shooting Club, Garden Terrace",
+  "venue_ar": "نادي الصيد · تراس الحديقة",
+  "voting_closes": "Voting closes in 2d 14h",
+  "voting_closes_ar": "التصويت يقفل خلال يومين و14 ساعة",
+  "cooks": 14,
+  "online_votes": 3422,
+  "verified_voters": 1180
+ },
+ "cooks": [
+  {
+   "id": "salma",
+   "rank": 1,
+   "name": "Salma Ezzat",
+   "name_ar": "سلمى عزت",
+   "dish": "Fatta bel Lahma",
+   "dish_ar": "فتة باللحمة",
+   "dish_kind": "fatta",
+   "votes": 412,
+   "rank_move": 1,
+   "area": "Mohandessin",
+   "area_ar": "المهندسين",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "hoda",
+   "rank": 2,
+   "name": "Hoda Mansour",
+   "name_ar": "هدى منصور",
+   "dish": "Mahshi Wara' Enab",
+   "dish_ar": "محشي ورق عنب",
+   "dish_kind": "mahshi",
+   "votes": 400,
+   "rank_move": -1,
+   "area": "Dokki",
+   "area_ar": "الدقي",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "amira",
+   "rank": 3,
+   "name": "Amira Saleh",
+   "name_ar": "أميرة صالح",
+   "dish": "Molokhia bel Arnab",
+   "dish_ar": "ملوخية بالأرنب",
+   "dish_kind": "molokhia",
+   "votes": 388,
+   "rank_move": 1,
+   "area": "Mohandessin",
+   "area_ar": "المهندسين",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "nadia",
+   "rank": 4,
+   "name": "Nadia Kamel",
+   "name_ar": "نادية كامل",
+   "dish": "Rokak bel Lahma",
+   "dish_ar": "رقاق باللحمة",
+   "dish_kind": "rokak",
+   "votes": 341,
+   "rank_move": -1,
+   "area": "Agouza",
+   "area_ar": "العجوزة",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "mona",
+   "rank": 5,
+   "name": "Mona Rashad",
+   "name_ar": "منى رشاد",
+   "dish": "Om Ali",
+   "dish_ar": "أم علي",
+   "dish_kind": "omali",
+   "votes": 318,
+   "rank_move": 3,
+   "area": "Dokki",
+   "area_ar": "الدقي",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "fatma",
+   "rank": 6,
+   "name": "Fatma Abdel Aziz",
+   "name_ar": "فاطمة عبد العزيز",
+   "dish": "Bamya bel Mozat",
+   "dish_ar": "بامية بالموزة",
+   "dish_kind": "bamya",
+   "votes": 287,
+   "rank_move": -2,
+   "area": "Giza",
+   "area_ar": "الجيزة",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "omar",
+   "rank": 7,
+   "name": "Omar Tawfik",
+   "name_ar": "عمر توفيق",
+   "dish": "Hawawshi",
+   "dish_ar": "حواوشي",
+   "dish_kind": "hawawshi",
+   "votes": 264,
+   "rank_move": 1,
+   "area": "Mohandessin",
+   "area_ar": "المهندسين",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "dina",
+   "rank": 8,
+   "name": "Dina Shalaby",
+   "name_ar": "دينا شلبي",
+   "dish": "Konafa bel Manga",
+   "dish_ar": "كنافة بالمانجا",
+   "dish_kind": "konafa",
+   "votes": 233,
+   "rank_move": -1,
+   "area": "Zamalek",
+   "area_ar": "الزمالك",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "hassan",
+   "rank": 9,
+   "name": "Hassan Nour",
+   "name_ar": "حسن نور",
+   "dish": "Feteer Meshaltet",
+   "dish_ar": "فطير مشلتت",
+   "dish_kind": "feteer",
+   "votes": 198,
+   "rank_move": 2,
+   "area": "Zamalek",
+   "area_ar": "الزمالك",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "yasmin",
+   "rank": 10,
+   "name": "Yasmin Fouad",
+   "name_ar": "ياسمين فؤاد",
+   "dish": "Koshari",
+   "dish_ar": "كشري",
+   "dish_kind": "koshari",
+   "votes": 176,
+   "rank_move": -1,
+   "area": "Agouza",
+   "area_ar": "العجوزة",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "nesma",
+   "rank": 11,
+   "name": "Nesma Adel",
+   "name_ar": "نسمة عادل",
+   "dish": "Sayadeya",
+   "dish_ar": "صيادية",
+   "dish_kind": "sayadeya",
+   "votes": 149,
+   "rank_move": 0,
+   "area": "Haram",
+   "area_ar": "الهرم",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "heba",
+   "rank": 12,
+   "name": "Heba Sami",
+   "name_ar": "هبة سامي",
+   "dish": "Basbousa bel Eshta",
+   "dish_ar": "بسبوسة بالقشطة",
+   "dish_kind": "basbousa",
+   "votes": 121,
+   "rank_move": 1,
+   "area": "Mohandessin",
+   "area_ar": "المهندسين",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "karim",
+   "rank": 13,
+   "name": "Karim Zaki",
+   "name_ar": "كريم زكي",
+   "dish": "Shorbet Lesan Asfour",
+   "dish_ar": "شوربة لسان عصفور",
+   "dish_kind": "shorba",
+   "votes": 88,
+   "rank_move": -1,
+   "area": "Dokki",
+   "area_ar": "الدقي",
+   "club": "Shooting Club"
+  },
+  {
+   "id": "reem",
+   "rank": 14,
+   "name": "Reem Gaber",
+   "name_ar": "ريم جابر",
+   "dish": "Mesa'a'a",
+   "dish_ar": "مسقعة",
+   "dish_kind": "mesaa",
+   "votes": 47,
+   "rank_move": 0,
+   "area": "Zamalek",
+   "area_ar": "الزمالك",
+   "club": "Shooting Club"
+  }
+ ],
+ "clubs": [
+  {
+   "name": "Shooting Club",
+   "name_ar": "نادي الصيد",
+   "votes": 3422,
+   "voters": 1180,
+   "cooks": 14,
+   "leading": true
+  },
+  {
+   "name": "Maadi Club",
+   "name_ar": "نادي المعادي",
+   "votes": 2914,
+   "voters": 1006,
+   "cooks": 12,
+   "leading": false
+  },
+  {
+   "name": "Gezira Club",
+   "name_ar": "نادي الجزيرة",
+   "votes": 2640,
+   "voters": 902,
+   "cooks": 13,
+   "leading": false
+  },
+  {
+   "name": "Wadi Degla",
+   "name_ar": "وادي دجلة",
+   "votes": 1876,
+   "voters": 640,
+   "cooks": 9,
+   "leading": false
+  },
+  {
+   "name": "New Giza",
+   "name_ar": "نيو جيزة",
+   "votes": 1455,
+   "voters": 512,
+   "cooks": 8,
+   "leading": false
+  }
+ ],
+ "club_dropdown": [
+  {
+   "id": "none",
+   "en": "Not a member",
+   "ar": "مش عضو"
+  },
+  {
+   "id": "gezira",
+   "en": "Gezira Sporting Club",
+   "ar": "نادي الجزيرة"
+  },
+  {
+   "id": "shooting",
+   "en": "Shooting Club",
+   "ar": "نادي الصيد"
+  },
+  {
+   "id": "heliopolis",
+   "en": "Heliopolis Club",
+   "ar": "نادي هليوبوليس"
+  },
+  {
+   "id": "maadi",
+   "en": "Maadi Club",
+   "ar": "نادي المعادي"
+  },
+  {
+   "id": "wadi-degla",
+   "en": "Wadi Degla",
+   "ar": "وادي دجلة"
+  },
+  {
+   "id": "new-giza",
+   "en": "New Giza",
+   "ar": "نيو جيزة"
+  },
+  {
+   "id": "ahly",
+   "en": "Al Ahly Club",
+   "ar": "النادي الأهلي"
+  },
+  {
+   "id": "zamalek",
+   "en": "Zamalek Club",
+   "ar": "نادي الزمالك"
+  },
+  {
+   "id": "shams",
+   "en": "El Shams Club",
+   "ar": "نادي الشمس"
+  },
+  {
+   "id": "shorta",
+   "en": "Police Club",
+   "ar": "نادي الشرطة"
+  },
+  {
+   "id": "tagneed",
+   "en": "Armed Forces Club",
+   "ar": "نادي القوات المسلحة"
+  },
+  {
+   "id": "katameya",
+   "en": "Katameya Heights",
+   "ar": "كتامية هايتس"
+  },
+  {
+   "id": "smash",
+   "en": "Smash Club",
+   "ar": "نادي سماش"
+  },
+  {
+   "id": "platinum",
+   "en": "Platinum Club",
+   "ar": "نادي بلاتينيوم"
+  },
+  {
+   "id": "other",
+   "en": "Another club",
+   "ar": "نادي تاني"
+  }
+ ],
+ "areas_near": [
+  {
+   "en": "Mohandessin",
+   "ar": "المهندسين",
+   "km_from_club": 1.2
+  },
+  {
+   "en": "Dokki",
+   "ar": "الدقي",
+   "km_from_club": 1.8
+  },
+  {
+   "en": "Agouza",
+   "ar": "العجوزة",
+   "km_from_club": 2.1
+  },
+  {
+   "en": "Zamalek",
+   "ar": "الزمالك",
+   "km_from_club": 3.4
+  },
+  {
+   "en": "Giza",
+   "ar": "الجيزة",
+   "km_from_club": 4.2
+  },
+  {
+   "en": "Haram",
+   "ar": "الهرم",
+   "km_from_club": 6.8
+  }
+ ],
+ "areas_more": [
+  {
+   "en": "Downtown",
+   "ar": "وسط البلد",
+   "km_from_club": 5.6
+  },
+  {
+   "en": "Faisal",
+   "ar": "فيصل",
+   "km_from_club": 8.1
+  },
+  {
+   "en": "Maadi",
+   "ar": "المعادي",
+   "km_from_club": 12.4
+  },
+  {
+   "en": "Sheikh Zayed",
+   "ar": "الشيخ زايد",
+   "km_from_club": 14.2
+  },
+  {
+   "en": "6th of October",
+   "ar": "6 أكتوبر",
+   "km_from_club": 17.5
+  },
+  {
+   "en": "New Cairo",
+   "ar": "القاهرة الجديدة",
+   "km_from_club": 22.0
+  }
+ ],
+ "area_stats": [
+  {
+   "area": "Mohandessin",
+   "area_ar": "المهندسين",
+   "voters": 312,
+   "member_voters": 198,
+   "cooks": 4,
+   "member_cooks": 2
+  },
+  {
+   "area": "Dokki",
+   "area_ar": "الدقي",
+   "voters": 264,
+   "member_voters": 172,
+   "cooks": 3,
+   "member_cooks": 1
+  },
+  {
+   "area": "Agouza",
+   "area_ar": "العجوزة",
+   "voters": 198,
+   "member_voters": 121,
+   "cooks": 2,
+   "member_cooks": 1
+  },
+  {
+   "area": "Zamalek",
+   "area_ar": "الزمالك",
+   "voters": 171,
+   "member_voters": 138,
+   "cooks": 3,
+   "member_cooks": 2
+  },
+  {
+   "area": "Giza",
+   "area_ar": "الجيزة",
+   "voters": 132,
+   "member_voters": 61,
+   "cooks": 1,
+   "member_cooks": 0
+  },
+  {
+   "area": "Haram",
+   "area_ar": "الهرم",
+   "voters": 68,
+   "member_voters": 19,
+   "cooks": 1,
+   "member_cooks": 0
+  },
+  {
+   "area": "Outside these areas",
+   "area_ar": "خارج المنطقة",
+   "voters": 35,
+   "member_voters": 3,
+   "cooks": 0,
+   "member_cooks": 0
+  }
+ ],
+ "final_scores": [
+  {
+   "cook": "salma",
+   "judges_of_40": 35.2,
+   "tasting_of_30": 26.1,
+   "online_of_30": 28.4
+  },
+  {
+   "cook": "hoda",
+   "judges_of_40": 33.6,
+   "tasting_of_30": 24.9,
+   "online_of_30": 27.6
+  },
+  {
+   "cook": "amira",
+   "judges_of_40": 32.8,
+   "tasting_of_30": 23.4,
+   "online_of_30": 26.8
+  }
+ ],
+ "scoring": {
+  "judges": 40,
+  "tasting": 30,
+  "online": 30,
+  "note": "Judge scores stay sealed until the ceremony."
+ },
+ "placeholders": {
+  "[SPONSOR]": "the event sponsor's name and lockup",
+  "[SCOUT PRIZE]": "the reward a nominator gets when their cook reaches the top 3",
+  "[GRAND SCOUT PRIZE]": "the top nominator reward at the end of the season",
+  "[CLUB SPONSOR]": "the club-level sponsor on the leaderboard",
+  "[CTA]": "the sponsor's own call to action on their report"
+ }
+};

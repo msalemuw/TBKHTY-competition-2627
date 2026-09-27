@@ -1,0 +1,205 @@
+/* Reset, type and the phone layout. Colours come from tokens.css only. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--c-paper);
+  color: var(--c-navy);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+:lang(ar) { font-family: var(--font-ar); }
+:lang(en) { font-family: var(--font-sans); }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: var(--c-teal-text); text-decoration: none; }
+img, svg { display: block; }
+bdi { unicode-bidi: isolate; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--c-blue); outline-offset: 2px; }
+
+/* Display face: Instrument Serif for English, Cairo for Arabic. */
+.display { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.01em; line-height: 1.08; }
+.display:lang(ar) { font-family: var(--font-ar); font-weight: 700; letter-spacing: 0; line-height: 1.3; }
+.marker { font-family: var(--font-marker); font-weight: 400; }
+.marker:lang(ar) { font-family: var(--font-ar); font-weight: 700; }
+
+/* ---------- App frame ---------- */
+#app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--c-paper);
+}
+@media (min-width: 430px) {
+  body {
+    background: var(--c-sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+  }
+  #app {
+    width: 390px;
+    height: min(844px, calc(100dvh - 32px));
+    border-radius: 30px;
+    box-shadow: 0 0 0 1px var(--c-line), 0 0 0 8px var(--c-white), 0 0 0 9px var(--c-line), 0 24px 60px rgba(33, 43, 53, .18);
+  }
+}
+
+/* ---------- Screen layout: fixed header, scrolling body, fixed action bar ---------- */
+.scr {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-paper);
+  overflow: hidden;
+}
+.scr.dark { background: var(--c-navy); color: var(--c-white); }
+.body {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.pad { padding: 14px; display: flex; flex-direction: column; gap: 11px; }
+.pad-x { padding-left: 14px; padding-right: 14px; }
+.stack { display: flex; flex-direction: column; }
+.row { display: flex; align-items: center; }
+.grow { flex: 1 1 auto; min-width: 0; }
+.none { flex: none; }
+.center { text-align: center; }
+.spacer { flex: 1 1 auto; }
+
+.bar {
+  flex: none;
+  background: var(--c-paper);
+  border-top: 1px solid var(--c-line);
+  padding: 10px 14px calc(14px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.scr.dark .bar { background: var(--c-navy); border-top-color: rgba(255, 255, 255, .12); }
+
+/* Scroll hint: shown by app.js only while content continues below the fold. */
+.scroll-hint {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0 8px;
+  margin-top: -6px;
+  background: linear-gradient(0deg, var(--c-paper) 55%, rgba(250, 250, 248, 0));
+  color: var(--c-muted);
+  font-size: 11px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.scr.dark .scroll-hint { background: linear-gradient(0deg, var(--c-navy) 55%, rgba(46, 58, 71, 0)); color: rgba(255, 255, 255, .7); }
+
+/* ---------- Header bars ---------- */
+.hdr {
+  flex: none;
+  min-height: 56px;
+  padding: env(safe-area-inset-top) 14px 0;
+  background: var(--c-white);
+  border-bottom: 1px solid var(--c-line);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hdr-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--c-navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hdr-dark {
+  flex: none;
+  background: var(--c-navy);
+  color: var(--c-white);
+  padding: env(safe-area-inset-top) 14px 14px;
+  position: relative;
+  overflow: hidden;
+}
+.hdr-dark .hdr-row { position: relative; height: 56px; display: flex; align-items: center; gap: 8px; }
+.logo { height: 28px; width: auto; flex: none; }
+.logo-sm { height: 26px; }
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--c-navy);
+  padding: 0;
+}
+.icon-btn.back { margin-inline-start: -10px; }
+.icon-btn.ring { border-radius: 50%; border: 1px solid var(--c-line); }
+.icon-btn.ring-dark { border-radius: 50%; border: 1px solid rgba(255, 255, 255, .28); color: var(--c-white); }
+.icon-btn.float { border-radius: 50%; background: rgba(255, 255, 255, .92); }
+.icon-btn.on-dark { color: var(--c-white); }
+[dir="rtl"] .flip { transform: scaleX(-1); }
+
+/* Language toggle: logo and background colours only, fixed width so switching never moves anything. */
+.lang {
+  display: flex;
+  align-items: center;
+  flex: none;
+  height: 46px;
+  padding: 0 1px;
+  border-radius: 999px;
+  background: var(--c-paper);
+  border: 1px solid var(--c-line);
+}
+.lang button {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lang button span {
+  width: 42px;
+  height: 34px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-muted);
+}
+.lang button[lang="ar"] span { font-family: var(--font-ar); font-size: 16px; }
+.lang button[aria-pressed="true"] span { background: var(--c-navy); color: var(--c-white); }
+.lang.on-dark { background: rgba(255, 255, 255, .12); border-color: rgba(255, 255, 255, .18); }
+.lang.on-dark button span { color: rgba(255, 255, 255, .72); }
+.lang.on-dark button[aria-pressed="true"] span { background: var(--c-white); color: var(--c-navy); }

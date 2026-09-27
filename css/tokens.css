@@ -1,0 +1,32 @@
+:root {
+  --c-navy: #2E3A47;
+  --c-navy-dark: #212B35;
+  --c-teal: #1ABC9C;
+  --c-teal-dark: #12A186;
+  --c-teal-text: #0B7A65;
+  --c-teal-bg: #E6F7F2;
+  --c-coral: #E8614D;
+  --c-coral-text: #C4402B;
+  --c-coral-bg: #FDEDE9;
+  --c-gold: #D9A144;
+  --c-blue: #3D8BC4;
+  --c-paper: #FAFAF8;
+  --c-white: #FFFFFF;
+  --c-sand: #EFE9DC;
+  --c-line: #E7E4DD;
+  --c-line-dark: #3E4B59;
+  --c-muted: #5C6B7A;
+  --font-sans: 'Plus Jakarta Sans',system-ui,sans-serif;
+  --font-serif: 'Instrument Serif',Georgia,serif;
+  --font-ar: 'Cairo','Plus Jakarta Sans',sans-serif;
+  --font-marker: 'Permanent Marker',system-ui,sans-serif;
+  --s-primary-button-height: 54px;
+  --s-secondary-button-height: 44px;
+  --s-min-tap-target: 44px;
+  --s-app-bar-height: 56px;
+  --s-bottom-nav-height: 64px;
+  --s-page-padding: 14px;
+  --s-card-radius: 16px;
+  --s-button-radius: 14px;
+  --s-chip-radius: 999px;
+}

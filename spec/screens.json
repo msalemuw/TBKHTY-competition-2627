@@ -1,0 +1,1960 @@
+{
+ "screens": [
+  {
+   "id": "A0",
+   "file": "A0-Welcome.dc.html",
+   "name": "Welcome",
+   "flow": "Flow A · Entry points",
+   "role": "entry",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "A0 · The screen before everything, for someone who arrives from a WhatsApp link knowing nothing. Three plain steps, then three doors, because the three people who land here want different things: a cook, a voter, and someone who knows a cook. Each door says what you do and what you get. Free, no app, two minutes, stated on the screen because those are the three unasked questions.",
+   "entry_point": "the WhatsApp invite link lands here",
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "I cook",
+     "to": "B1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "I want to vote",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "I know a cook",
+     "to": "C1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "See the rankings",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "How it works",
+     "to": "A3",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": []
+  },
+  {
+   "id": "A1",
+   "file": "Main.dc.html",
+   "name": "TBKHTY home",
+   "flow": "Flow A · Entry points",
+   "role": "entry",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "A1 · The entry point, above any single club. The topline ranking of the best cooks across all five editions with its area and dish filters, then the competitions themselves, soonest to close first, so nothing assumes which club you belong to.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Find a cook",
+     "to": "E8",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "How the competition works",
+     "to": "A3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Vote for your favourite cook",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Sign up as a cook to compete",
+     "to": "B1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Nominate a cook you know",
+     "to": "C1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "New here? How the competition works",
+     "to": "A3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Any cook in the top 3",
+     "to": "E2",
+     "note": null,
+     "count": 3
+    },
+    {
+     "label": "Full leaderboard",
+     "to": "F1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Area titles",
+     "to": "J2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Any competition card",
+     "to": "A2",
+     "note": null,
+     "count": 4
+    }
+   ],
+   "reached_from": [
+    "A0",
+    "A2",
+    "A3",
+    "B1",
+    "C1",
+    "C3",
+    "E1",
+    "E8",
+    "F1",
+    "H3",
+    "J1"
+   ]
+  },
+  {
+   "id": "A2",
+   "file": "A1b-ClubHome.dc.html",
+   "name": "Club edition home",
+   "flow": "Flow A · Entry points",
+   "role": "entry",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "A2 · One edition, reached from the home screen. Two taps to everything: vote or enter. Countdown to voting close and to the tasting, live top 3, social proof, and the other live editions along the bottom.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "All competitions",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Vote in this edition",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "How the competition works",
+     "to": "A3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Nominate a cook you know",
+     "to": "C1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "See all 14 competitors",
+     "to": "F1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "A1",
+    "AR1"
+   ]
+  },
+  {
+   "id": "A3",
+   "file": "A2-HowItWorks.dc.html",
+   "name": "How the competition works",
+   "flow": "Flow A · Entry points",
+   "role": "entry",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "A3 · How the competition works. Three illustrated steps for cooks, three for voters, the 40/30/30 scoring split with judges sealed until the ceremony, and the prizes.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Sign up as a cook to compete",
+     "to": "B1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Just here to vote? Start voting",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "A0",
+    "A1",
+    "A2",
+    "AR1"
+   ]
+  },
+  {
+   "id": "B1",
+   "file": "B1-Intro.dc.html",
+   "name": "Show Cairo your cooking",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B1 · Why enter. Prizes, neighbours tasting her food, first access when orders open. One CTA, plus a WhatsApp route for cooks who would rather be helped through it.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Enter now",
+     "to": "B2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Prefer help? Send us your entry on WhatsApp",
+     "to": "B2",
+     "note": "handoff, prototyped as B2",
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "A0",
+    "A1",
+    "A3",
+    "AR1",
+    "B2"
+   ]
+  },
+  {
+   "id": "B2",
+   "file": "B2-Verify.dc.html",
+   "name": "Verify your number",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B2 · Verify. WhatsApp number, 4-digit code, and a consent line written in plain words. Step 1 of 4.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "B1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Continue",
+     "to": "B3",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "AR2",
+    "B1",
+    "B3",
+    "C2"
+   ]
+  },
+  {
+   "id": "B3",
+   "file": "B3-About.dc.html",
+   "name": "About you and your area",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B3 · About you. Club is already known from the invite link, so the taps go on location instead: one GPS button, or one tap on an area chip showing its distance from the club. Photo stays optional.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "B2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Move pin",
+     "to": "B3b",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Continue",
+     "to": "B3d",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "B2",
+    "B3b",
+    "B3d"
+   ]
+  },
+  {
+   "id": "B3a",
+   "file": "B3a-AreaPicker.dc.html",
+   "name": "Area picker",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B3a · Area picker. The full drill-down: governorate chips, then the areas inside it, and a compounds level where one exists. Search across the whole list, and an escape hatch for anything missing. Distance to the club is computed in the backend, never shown here.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "B3d",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Confirm Giza · Mohandessin",
+     "to": "B3d",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "B3d"
+   ]
+  },
+  {
+   "id": "B3b",
+   "file": "B3b-DropPin.dc.html",
+   "name": "Drop your pin",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B3b · The pin itself. GPS centres the map, she drags to her building, and the coordinate is only stored when she confirms. The line under the address is the one thing the pin is for: how far she is from the club, computed in the backend.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "B3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Confirm this pin",
+     "to": "B3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Cancel",
+     "to": "B3",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "AR2",
+    "B3"
+   ]
+  },
+  {
+   "id": "B3d",
+   "file": "B3d-AreaClub.dc.html",
+   "name": "Your area and club",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B3d · Step 3 of 5. Split out of B3, which was holding a map, two required selects, a club select and an explainer in one step. The pin's reading is confirmed at the top, then governorate, area and the optional club, and the teal card shows the consequence live: the two rankings these answers just entered you into, with a link to how the two tracks work.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "B3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Browse the full list or add a compound",
+     "to": "B3a",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "How the two rankings work",
+     "to": "J1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Continue",
+     "to": "B4",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "AR2",
+    "B3",
+    "B3a",
+    "B4"
+   ]
+  },
+  {
+   "id": "B4",
+   "file": "B4-Dish.dc.html",
+   "name": "Your signature dish",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B4 · Signature dish. Dish name, one photo with three shooting tips, a two-line story and one category chip. This is the screen that produces the feed post.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "B3d",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Continue",
+     "to": "B5",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "B3d",
+    "B5"
+   ]
+  },
+  {
+   "id": "B5",
+   "file": "B5-Preview.dc.html",
+   "name": "Entry preview",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B5 · Preview. The entry rendered exactly as voters will see it, so nothing is a surprise. Confirm or go back and edit.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "B4",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Edit",
+     "to": "B4",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Submit my entry",
+     "to": "B6",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "B4"
+   ]
+  },
+  {
+   "id": "B6",
+   "file": "B6-Success.dc.html",
+   "name": "You're in",
+   "flow": "Flow B · eCook signup",
+   "role": "cook-signup",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "B6 · Celebration. Competitor number, confetti, and the share card as the primary action while she is still excited. The dashboard is the quiet second option.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Get your first votes",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Go to my dashboard",
+     "to": "D1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "B5"
+   ]
+  },
+  {
+   "id": "C1",
+   "file": "C1-Nominate.dc.html",
+   "name": "Nominate a cook",
+   "flow": "Flow C · Nomination",
+   "role": "nominator",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "C1 · Nominate. The prize ladder comes first, because 'nominate a cook' on its own gives a voter no reason to tap. Then five fields, and a WhatsApp invite carrying the nominator's name, which is what makes it get opened.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "My nominations",
+     "to": "C3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "See all four rungs",
+     "to": "C3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Nominate her",
+     "to": "C2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "A0",
+    "A1",
+    "A2",
+    "AR1",
+    "C3",
+    "J2",
+    "K3"
+   ]
+  },
+  {
+   "id": "C2",
+   "file": "C2-NominationReceived.dc.html",
+   "name": "Nomination received",
+   "flow": "Flow C · Nomination",
+   "role": "nominator",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "C2 · What she sees. Three neighbours, in their own words, the fact that they win if she reaches the top 3, then straight into a pre-filled version of Flow B starting at verification.",
+   "entry_point": "the nomination WhatsApp message lands here",
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Accept my nomination",
+     "to": "B2",
+     "note": "opens signup, already verified",
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "C1"
+   ]
+  },
+  {
+   "id": "C3",
+   "file": "C3-MyNominations.dc.html",
+   "name": "My nominations",
+   "flow": "Flow C · Nomination",
+   "role": "nominator",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "C3 · The nominator's tracker. The cooks she found, how far each has got, the rung that unlocks next and a nudge to share the one who is closest. Reached from the gift icon on A1, A2 and her supporter profile.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Any cook I nominated",
+     "to": "E2",
+     "note": null,
+     "count": 3
+    },
+    {
+     "label": "Share this cook's entry",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Nominate another cook",
+     "to": "C1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "C1",
+    "E7",
+    "H4"
+   ]
+  },
+  {
+   "id": "D1",
+   "file": "D1-Dashboard.dc.html",
+   "name": "My entry dashboard",
+   "flow": "Flow D · eCook dashboard",
+   "role": "cook-dashboard",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "D1 · Dashboard. Rank with movement, total votes, votes today, countdown, the close-race nudge, the milestone bar and the supporters who brought the votes.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Share now to close the gap",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Share to get votes",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Your season so far",
+     "to": "H3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "My kitchen",
+     "to": "D3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Tasting day",
+     "to": "D4",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "B6",
+    "D2",
+    "D3",
+    "D4",
+    "J4"
+   ]
+  },
+  {
+   "id": "D2",
+   "file": "D2-ShareCard.dc.html",
+   "name": "Share card generator",
+   "flow": "Flow D · eCook dashboard",
+   "role": "cook-dashboard",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "D2 · Share card. The 9:16 story image she actually posts, with four one-tap destinations and the credit line from her last share.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "D1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "B6",
+    "C3",
+    "D1",
+    "E4",
+    "E6",
+    "F2",
+    "H2",
+    "J4",
+    "J5"
+   ]
+  },
+  {
+   "id": "D3",
+   "file": "D3-KitchenProfile.dc.html",
+   "name": "Kitchen readiness",
+   "flow": "Flow D · eCook dashboard",
+   "role": "cook-dashboard",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "D3 · Kitchen readiness. Delivery radius is now the live card, anchored on the area she gave at signup, so location turns into a reachable zone. Seven questions, one card at a time, each answer paying out a small unlock.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "D1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "My entry",
+     "to": "D1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Tasting day",
+     "to": "D4",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "D1",
+    "D4",
+    "H3"
+   ]
+  },
+  {
+   "id": "D4",
+   "file": "D4-TastingChecklist.dc.html",
+   "name": "Tasting day checklist",
+   "flow": "Flow D · eCook dashboard",
+   "role": "cook-dashboard",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "D4 · Tasting day. Table number, arrival time, what to bring, the rule that the dish must match the entry photo, and the map inside the club.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "D1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "My entry",
+     "to": "D1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "My kitchen",
+     "to": "D3",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "D1",
+    "D3"
+   ]
+  },
+  {
+   "id": "E1",
+   "file": "E1-Feed.dc.html",
+   "name": "Browse entries",
+   "flow": "Flow E · Voter journey",
+   "role": "voter",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "E1 · Feed. Entries as social posts under a sticky countdown, with category filters. The vote button sits where a like button would.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Find a cook",
+     "to": "E8",
+     "note": null,
+     "count": 2
+    },
+    {
+     "label": "Change edition",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Any entry card",
+     "to": "E2",
+     "note": null,
+     "count": 2
+    },
+    {
+     "label": "Me",
+     "to": "E7",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "AR1",
+    "AR3",
+    "E2",
+    "E6",
+    "E7",
+    "E8",
+    "H4"
+   ]
+  },
+  {
+   "id": "E2",
+   "file": "E2-EntryDetail.dc.html",
+   "name": "Entry detail",
+   "flow": "Flow E · Voter journey",
+   "role": "voter",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "E2 · Cook page. An early creator profile: vote, follow with the kitchen-opens promise, order intent with price chips, and her other dishes.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Vote for Amira",
+     "to": "E3",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "A1",
+    "AR1",
+    "C3",
+    "E1",
+    "E3",
+    "E8"
+   ]
+  },
+  {
+   "id": "E3",
+   "file": "E3-VerifySheet.dc.html",
+   "name": "Verify to vote",
+   "flow": "Flow E · Voter journey",
+   "role": "voter",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "E3 · Verify to vote. Same two required location steps as the cook side, compressed into the sheet: location confirmed, then governorate and area side by side. Club stays optional underneath.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "×",
+     "to": "E2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Confirm my vote",
+     "to": "E4",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Not now",
+     "to": "E2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "AR3",
+    "E2",
+    "E8"
+   ]
+  },
+  {
+   "id": "E4",
+   "file": "E4-VoteConfirmed.dc.html",
+   "name": "Vote confirmed",
+   "flow": "Flow E · Voter journey",
+   "role": "voter",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "E4 · Confirmed. Rank movement, the streak starting, share as the primary action and the raffle questions as the optional one.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Answer them",
+     "to": "E5",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Share to help her win",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Vote again tomorrow",
+     "to": "E6",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "E3",
+    "E5"
+   ]
+  },
+  {
+   "id": "E5",
+   "file": "E5-QuickProfile.dc.html",
+   "name": "Quick profile",
+   "flow": "Flow E · Voter journey",
+   "role": "voter",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "E5 · Quick profile. Area is already saved from E3 and shown as confirmed context rather than asked twice. Three chip questions, paid for with a raffle entry.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "E4",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Save and finish",
+     "to": "E7",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "E4"
+   ]
+  },
+  {
+   "id": "E6",
+   "file": "E6-AlreadyVoted.dc.html",
+   "name": "Already voted today",
+   "flow": "Flow E · Voter journey",
+   "role": "voter",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "E6 · Daily limit. The one-vote-a-day rule made friendly: countdown to the next vote, the streak at stake, share instead, and cooks to follow.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Share instead to help Amira",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "E4"
+   ]
+  },
+  {
+   "id": "E8",
+   "file": "E8-SearchCooks.dc.html",
+   "name": "Find a cook",
+   "flow": "Flow E · Voter journey",
+   "role": "voter",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "E8 · Search, reached from the magnifier on A1 and on the feed. One field covers name, dish and area, and each row says which of the three matched, so someone sent a name on WhatsApp can find her without knowing her club or her rank. Vote straight from the result.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Any search result",
+     "to": "E2",
+     "note": null,
+     "count": 5
+    },
+    {
+     "label": "Vote button on a result",
+     "to": "E3",
+     "note": null,
+     "count": 5
+    },
+    {
+     "label": "Vote",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Me",
+     "to": "E7",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "A1",
+    "AR1",
+    "AR3",
+    "E1",
+    "E7"
+   ]
+  },
+  {
+   "id": "E7",
+   "file": "E7-SupporterProfile.dc.html",
+   "name": "My supporter profile",
+   "flow": "Flow E · Voter journey",
+   "role": "voter",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "E7 · Supporter profile. Streak, badges, the votes her shares actually produced, and raffle entries. The voter-side identity Phase 2 inherits.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "You nominated 3 cooks",
+     "to": "C3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Your season so far",
+     "to": "H4",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Vote",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Find a cook",
+     "to": "E8",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "AR3",
+    "E1",
+    "E5",
+    "E8"
+   ]
+  },
+  {
+   "id": "F1",
+   "file": "F1-ClubLeaderboard.dc.html",
+   "name": "Club leaderboard",
+   "flow": "Flow F · Leaderboards",
+   "role": "leaderboard",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "F1 · Club leaderboard. Podium, ranked list with movement arrows, a close-race band between second and third, and the note that judges and tasting stay sealed.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Club vs club",
+     "to": "F2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Final results",
+     "to": "H1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "A1",
+    "A2",
+    "AR1",
+    "F2",
+    "G2"
+   ]
+  },
+  {
+   "id": "F2",
+   "file": "F2-ClubVsClub.dc.html",
+   "name": "Club vs club",
+   "flow": "Flow F · Leaderboards",
+   "role": "leaderboard",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "F2 · Club vs club. Five clubs by total participation with your club pinned, and one share to push it up the city table.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "F1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Help Shooting Club lead the city",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "F1",
+    "H3"
+   ]
+  },
+  {
+   "id": "G1",
+   "file": "G1-TableQR.dc.html",
+   "name": "Table QR landing",
+   "flow": "Flow G · Live tasting event",
+   "role": "live-event",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "G1 · Table QR. One dish, one giant button, one rule stated before the button: taste everything first.",
+   "entry_point": "QR code on the table at the tasting event",
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Vote for this dish",
+     "to": "G2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": []
+  },
+  {
+   "id": "G2",
+   "file": "G2-LiveVoteConfirmed.dc.html",
+   "name": "Live vote confirmed",
+   "flow": "Flow G · Live tasting event",
+   "role": "live-event",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "G2 · Live vote in. What the vote is worth, how many of the 340 guests have voted, and when results are announced.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back to the leaderboard",
+     "to": "F1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "G1"
+   ]
+  },
+  {
+   "id": "G3",
+   "file": "G3-BigScreen.dc.html",
+   "name": "Big screen live board",
+   "flow": "Flow G · Live tasting event",
+   "role": "live-event",
+   "size": [
+    1280,
+    720
+   ],
+   "phone": false,
+   "purpose": "G3 · Big screen. Landscape board for the TV at the club: live tasting counts, sponsor lockup and the countdown to the reveal.",
+   "entry_point": "opened on the room screen by the host, nobody taps into it",
+   "in_demo": false,
+   "not_in_demo_because": "Room screen for the live event, 1280x720, shown on a TV. Out of scope for the phone demo.",
+   "links": [],
+   "reached_from": []
+  },
+  {
+   "id": "H1",
+   "file": "H1-Results.dc.html",
+   "name": "Results reveal",
+   "flow": "Flow H · Results and after",
+   "role": "results",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "H1 · Results. Third, second, then the winner, each opened up into judges, tasting and online so the blend is visible rather than asserted.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "See the winner's page",
+     "to": "H2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "F1",
+    "K3"
+   ]
+  },
+  {
+   "id": "H2",
+   "file": "H2-WinnerPage.dc.html",
+   "name": "Winner page",
+   "flow": "Flow H · Results and after",
+   "role": "results",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "H2 · Winner page. A permanent profile badge, the final score, the Grand Final line and a follow button that carries into Phase 2.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "See them on her profile",
+     "to": "J3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Share the winner card",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "H1"
+   ]
+  },
+  {
+   "id": "H3",
+   "file": "H3-ThankYouCooks.dc.html",
+   "name": "Thank you, competitors",
+   "flow": "Flow H · Results and after",
+   "role": "results",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "H3 · Every competitor. Verified eCook badge, personal stats, and the nudge to finish the kitchen profile before orders open.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Finish the last 3 questions",
+     "to": "D3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Share your final result",
+     "to": "F2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "D1"
+   ]
+  },
+  {
+   "id": "H4",
+   "file": "H4-VoterWrapUp.dc.html",
+   "name": "Voter wrap-up",
+   "flow": "Flow H · Results and after",
+   "role": "results",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "H4 · Voter wrap-up. Season stats, raffle result, follow your favourites, and the teaser for the next club edition.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "You nominated 3 cooks",
+     "to": "C3",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "E7"
+   ]
+  },
+  {
+   "id": "J1",
+   "file": "J1-TitleLadder.dc.html",
+   "name": "Two title tracks",
+   "flow": "Flow J · Titles and seasons",
+   "role": "titles",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "J1 · Two tracks, run at once. Your area is open to everyone and carries dish, category and area titles; your club is optional and members-only. Both feed the city title, with Hoda as the worked example and the scarcity rule underneath.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "A1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "B3d",
+    "J2"
+   ]
+  },
+  {
+   "id": "J2",
+   "file": "J2-AreaTitles.dc.html",
+   "name": "Titles in your area",
+   "flow": "Flow J · Titles and seasons",
+   "role": "titles",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "J2 · Area board. Titles held now with their holder and how long they have held them, then the locked ones. A locked title is a recruitment ask: invite two more molokhia cooks and it opens.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "J1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Invite 2 more cooks to unlock",
+     "to": "C1",
+     "note": null,
+     "count": 2
+    }
+   ],
+   "reached_from": [
+    "A1",
+    "AR1",
+    "J3",
+    "J4"
+   ]
+  },
+  {
+   "id": "J3",
+   "file": "J3-TitledProfile.dc.html",
+   "name": "Titled cook profile",
+   "flow": "Flow J · Titles and seasons",
+   "role": "titles",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "J3 · The status asset. Titles sit under her name on the same creator profile from E2, with a held-since line each. This is what carries into Phase 2 when her kitchen opens.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "J2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "One of her titles is challenged",
+     "to": "J4",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "H2",
+    "J5"
+   ]
+  },
+  {
+   "id": "J4",
+   "file": "J4-TitleChallenged.dc.html",
+   "name": "Your title is challenged",
+   "flow": "Flow J · Titles and seasons",
+   "role": "titles",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "J4 · The months-long engine. Eight votes apart with three days left brings a holder back to share again, and gives the challenger a scalp worth taking.",
+   "entry_point": null,
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Back",
+     "to": "D1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Defend my title",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "See the area board",
+     "to": "J2",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": [
+    "J3"
+   ]
+  },
+  {
+   "id": "J5",
+   "file": "J5-TitleAwarded.dc.html",
+   "name": "Title awarded",
+   "flow": "Flow J · Titles and seasons",
+   "role": "titles",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "J5 · Hoda takes #1 Cook in Dokki while finishing second overall. Titles spread the winning around, which is what keeps thirteen of fourteen cooks playing.",
+   "entry_point": "arrives as a push or WhatsApp notification",
+   "in_demo": true,
+   "not_in_demo_because": null,
+   "links": [
+    {
+     "label": "Share my title card",
+     "to": "D2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "See it on my profile",
+     "to": "J3",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": []
+  },
+  {
+   "id": "I1",
+   "file": "I1-SponsorReport.dc.html",
+   "name": "Sponsor event report",
+   "flow": null,
+   "role": "sponsor",
+   "size": [
+    1280,
+    1300
+   ],
+   "phone": false,
+   "purpose": "FLOW I · Sponsor report (desktop). KPI row, votes per day, shares by channel, featured entries, photo highlights, and the payoff from the location data: voters and cooks per area, which is where the supply gap becomes visible.",
+   "entry_point": "private link sent to the sponsor, desktop width",
+   "in_demo": false,
+   "not_in_demo_because": "Sponsor report, desktop width, sent as a private link. Out of scope for the phone demo.",
+   "links": [],
+   "reached_from": []
+  },
+  {
+   "id": "AR1",
+   "file": "AR1-HomeArabic.dc.html",
+   "name": "Home, Arabic",
+   "flow": "Arabic · right to left",
+   "role": "arabic",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "AR1 · The home screen in Arabic. Not a translation of A1: the layout is mirrored, Arabic is the primary line and English is demoted, and the display face is Cairo because Instrument Serif has no Arabic. Note what moved: the back and next arrows point the other way, the rank number sits on the right of each row, the movement arrow on the left, and the carousel swipes the other way.",
+   "entry_point": null,
+   "in_demo": false,
+   "not_in_demo_because": "Arabic mirroring reference for A1. Arabic is a toggle on every screen, not a separate screen.",
+   "links": [
+    {
+     "label": "دوّر على طباخ",
+     "to": "E8",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "إزاي المسابقة شغالة",
+     "to": "A3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Vote for your favourite cook",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Sign up as a cook to compete",
+     "to": "B1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Nominate a cook you know",
+     "to": "C1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "أول مرة؟ إزاي المسابقة شغالة",
+     "to": "A3",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Any cook in the top 3",
+     "to": "E2",
+     "note": null,
+     "count": 3
+    },
+    {
+     "label": "الترتيب الكامل",
+     "to": "F1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "الألقاب",
+     "to": "J2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Any competition card",
+     "to": "A2",
+     "note": null,
+     "count": 3
+    }
+   ],
+   "reached_from": [
+    "AR3"
+   ]
+  },
+  {
+   "id": "AR2",
+   "file": "AR2-SignupArabic.dc.html",
+   "name": "Signup step 2, Arabic",
+   "flow": "Arabic · right to left",
+   "role": "arabic",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "AR2 · The hardest screen to mirror, which is why it is here: a floated field label, a map with an overlaid accuracy chip, a photo avatar with a corner badge, and a sticky action bar. Every one of those hard-codes a side in the English build.",
+   "entry_point": null,
+   "in_demo": false,
+   "not_in_demo_because": "Arabic mirroring reference for B3.",
+   "links": [
+    {
+     "label": "Back",
+     "to": "B2",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "حرّك الدبوس",
+     "to": "B3b",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Continue",
+     "to": "B3d",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": []
+  },
+  {
+   "id": "AR3",
+   "file": "AR3-FeedArabic.dc.html",
+   "name": "Feed, Arabic",
+   "flow": "Arabic · right to left",
+   "role": "arabic",
+   "size": [
+    390,
+    844
+   ],
+   "phone": true,
+   "purpose": "AR3 · The feed in Arabic, with the story text in Egyptian Arabic rather than a translation of the English. The vote button, follow and share keep their order relative to the reading direction, so the primary action still lands under the thumb.",
+   "entry_point": null,
+   "in_demo": false,
+   "not_in_demo_because": "Arabic mirroring reference for E1.",
+   "links": [
+    {
+     "label": "دوّر على طباخ",
+     "to": "E8",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "غيّر",
+     "to": "AR1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Vote button on a card",
+     "to": "E3",
+     "note": null,
+     "count": 2
+    },
+    {
+     "label": "صوّت",
+     "to": "E1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "دوّر",
+     "to": "E8",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "حسابي",
+     "to": "E7",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": []
+  },
+  {
+   "id": "K1",
+   "file": "K1-PostComponents.dc.html",
+   "name": "Posts and profiles",
+   "flow": "Component kit",
+   "role": "reference",
+   "size": [
+    900,
+    1160
+   ],
+   "phone": false,
+   "purpose": "K1 · The reusable pieces: entry post, creator profile header, vote and follow states, rank badges and avatar sizes, built so Phase 2 inherits them.",
+   "entry_point": null,
+   "in_demo": false,
+   "not_in_demo_because": "Component sheet. Build the components from it, do not build it as a page.",
+   "links": [],
+   "reached_from": []
+  },
+  {
+   "id": "K2",
+   "file": "K2-Foundations.dc.html",
+   "name": "Foundations",
+   "flow": "Component kit",
+   "role": "reference",
+   "size": [
+    900,
+    1160
+   ],
+   "phone": false,
+   "purpose": "K2 · Foundations: colour with the contrast decisions written down, type across three families, the icon set and the five engagement patterns.",
+   "entry_point": null,
+   "in_demo": false,
+   "not_in_demo_because": "Foundations sheet: colour, type, icons, engagement patterns.",
+   "links": [],
+   "reached_from": []
+  },
+  {
+   "id": "K3",
+   "file": "K3-States.dc.html",
+   "name": "Empty, error and losing states",
+   "flow": "Component kit",
+   "role": "reference",
+   "size": [
+    1100,
+    1640
+   ],
+   "phone": false,
+   "purpose": "K3 · The states the happy path hides, and every one happens in week one: nobody matches the search, you are the first cook in your area, location is denied, the code is wrong, the photo upload dies, voting has closed, the phone is offline, and the cook sitting at #12 of 14. The losing-cook panel carries the rule: below 5th place, never show the gap to the leader.",
+   "entry_point": null,
+   "in_demo": false,
+   "not_in_demo_because": "States catalogue. Every state in it must be implemented inside its own screen.",
+   "links": [
+    {
+     "label": "Invite 2 more cooks to unlock",
+     "to": "C1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "Invite 1 more cook to unlock",
+     "to": "C1",
+     "note": null,
+     "count": 1
+    },
+    {
+     "label": "See the results",
+     "to": "H1",
+     "note": null,
+     "count": 1
+    }
+   ],
+   "reached_from": []
+  },
+  {
+   "id": "M1",
+   "file": "M1-ScreenMap.dc.html",
+   "name": "Screen map",
+   "flow": "Screen map",
+   "role": "reference",
+   "size": [
+    2358,
+    2141
+   ],
+   "phone": false,
+   "purpose": "Not a screen. The routing table, generated from the other artboards.",
+   "entry_point": null,
+   "in_demo": false,
+   "not_in_demo_because": "The screen map. A document, not a screen.",
+   "links": [],
+   "reached_from": []
+  }
+ ]
+}

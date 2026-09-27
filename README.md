@@ -18,7 +18,7 @@ Then open <http://localhost:8000>.
 
 ## Put it on a static host
 
-Upload the whole `masters-demo` folder as it is (Netlify drop, GitHub Pages, S3, any web server). There is nothing to build. The only request that leaves the host is the Google Fonts stylesheet; without it the app still works, in system fonts.
+Upload the whole folder as it is (Netlify drop, GitHub Pages, S3, any web server). There is nothing to build. The only request that leaves the host is the Google Fonts stylesheet; without it the app still works, in system fonts.
 
 The `test/`, `spec/` and `docs/` folders are not needed at runtime but do no harm if uploaded. `spec/` holds the manifest the tests read.
 

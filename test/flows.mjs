@@ -110,6 +110,16 @@ await check('Signup B1 to B6 creates a 15th cook who appears in the feed, search
   assert(!p.errors.length, p.errors.join(' | '));
 });
 
+await check('All 27 governorates are offered, and one without listed areas can still enter', async () => {
+  const p = await page({ geo: false });
+  await p.goto(BASE + '#/b3d'); await on(p, 'B3d');
+  const govs = await p.$$eval('#s-gov option', (o) => o.map((x) => x.value));
+  assert(govs.length === 27, 'governorates offered: ' + govs.length);
+  await p.selectOption('#s-gov', 'alexandria'); await p.waitForTimeout(200);
+  assert((await store(p, 'return m.state.signup.area')) === 'gov-alexandria', 'Alexandria not selected as the area');
+  await tap(p, '[data-to="B4"]'); await on(p, 'B4');
+});
+
 await check('Location denied shows the K3 state and falls through to the manual area picker', async () => {
   const p = await page({ geo: false });
   await p.goto(BASE + '#/b3'); await on(p, 'B3');

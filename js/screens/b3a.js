@@ -42,12 +42,21 @@ export default {
       </div></div>
       <div class="bar" style="background:var(--c-white)">
         <button type="button" class="link-quiet teal-ink" style="font-weight:800" data-toast="b3a.notListedToast">${t('b3a.notListed')}</button>
-        ${btn({ key: 'b3a.confirm', vars: confirmV, to: 'B3d', primary: true, back: true, cls: 'btn-52' })}
+        ${btn({ key: area.wholeGov ? 'b3a.confirmGov' : 'b3a.confirm', vars: confirmV, to: 'B3d', primary: true, back: true, cls: 'btn-52' })}
       </div>
     </section>`;
   },
   mount(root, p, api) {
-    root.querySelectorAll('[data-gov]').forEach((b) => b.addEventListener('click', () => { query = ''; ui.gov = b.dataset.gov; api.rerender({ top: true }); }));
+    root.querySelectorAll('[data-gov]').forEach((b) => b.addEventListener('click', () => {
+      query = '';
+      ui.gov = b.dataset.gov;
+      const list = AREAS.filter((a) => a.gov === ui.gov);
+      if (list.length === 1) ui.area = list[0].id;
+      api.rerender({ top: true });
+    }));
+    // With 27 governorates the chip row scrolls; keep the chosen one in view.
+    const on = root.querySelector('[data-gov][aria-pressed="true"]');
+    if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' });
     root.querySelectorAll('[data-area]').forEach((b) => b.addEventListener('click', () => { ui.area = b.dataset.area; ui.gov = areaById(ui.area).gov; api.rerender(); }));
     const input = root.querySelector('#area-q');
     let tm = null;

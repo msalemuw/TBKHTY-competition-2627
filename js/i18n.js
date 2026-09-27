@@ -317,6 +317,7 @@ export const S = {
   'b3a.notListed': { en: 'My area is not on the list', ar: null }, // TODO(ar)
   'b3a.notListedToast': { en: 'Demo: this would open a free-text field for the team to add it.', ar: null }, // TODO(ar): demo notice
   'b3a.confirm': { en: 'Confirm {gov} · {area}', ar: 'أكّد {gov} · {area}' },
+  'b3a.confirmGov': { en: 'Confirm {gov}', ar: 'أكّد {gov}' },
   'b3a.none': { en: 'No area matches that search.', ar: null }, // TODO(ar)
   // ---------- B3b Drop pin ----------
   'b3b.title': { en: 'Drop your pin', ar: 'حرّك الدبوس' },

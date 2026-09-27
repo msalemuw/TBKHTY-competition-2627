@@ -317,7 +317,9 @@ export function govAreaFields(prefix, gov, area, { side = false } = {}) {
 export function wireGovArea(root, prefix, onChange) {
   const g = root.querySelector('#' + prefix + '-gov');
   const a = root.querySelector('#' + prefix + '-area');
-  if (g) g.addEventListener('change', () => onChange({ gov: g.value, area: null, changed: 'gov' }));
+  // A governorate with a single area in the list selects it straight away.
+  const only = (gov) => { const list = AREAS.filter((x) => x.gov === gov); return list.length === 1 ? list[0].id : null; };
+  if (g) g.addEventListener('change', () => onChange({ gov: g.value, area: only(g.value), changed: 'gov' }));
   if (a) a.addEventListener('change', () => onChange({ gov: g ? g.value : null, area: a.value || null, changed: 'area' }));
 }
 

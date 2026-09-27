@@ -31,10 +31,37 @@ const STORIES = {
 const FOLLOWERS = { amira: 126, salma: 214 };
 
 // Governorate for each area in the controlled list. Areas are ids from content.json.
+// All 27 governorates of Egypt, with the capital's approximate position (used
+// only to match the one geolocation reading to a governorate). Giza and Cairo
+// come first because the Shooting Club sits between them.
 export const GOVERNORATES = [
-  { id: 'giza', en: 'Giza', ar: 'الجيزة' },
-  { id: 'cairo', en: 'Cairo', ar: 'القاهرة' },
-  { id: 'qalyubia', en: 'Qalyubia', ar: 'القليوبية' },
+  { id: 'giza', en: 'Giza', ar: 'الجيزة', centre: [30.0131, 31.2089] },
+  { id: 'cairo', en: 'Cairo', ar: 'القاهرة', centre: [30.0444, 31.2357] },
+  { id: 'alexandria', en: 'Alexandria', ar: 'الإسكندرية', centre: [31.2001, 29.9187] },
+  { id: 'aswan', en: 'Aswan', ar: 'أسوان', centre: [24.0889, 32.8998] },
+  { id: 'asyut', en: 'Asyut', ar: 'أسيوط', centre: [27.1783, 31.1859] },
+  { id: 'beheira', en: 'Beheira', ar: 'البحيرة', centre: [31.0341, 30.4682] },
+  { id: 'beni-suef', en: 'Beni Suef', ar: 'بني سويف', centre: [29.0661, 31.0994] },
+  { id: 'dakahlia', en: 'Dakahlia', ar: 'الدقهلية', centre: [31.0409, 31.3785] },
+  { id: 'damietta', en: 'Damietta', ar: 'دمياط', centre: [31.4165, 31.8133] },
+  { id: 'faiyum', en: 'Faiyum', ar: 'الفيوم', centre: [29.3084, 30.8428] },
+  { id: 'gharbia', en: 'Gharbia', ar: 'الغربية', centre: [30.7865, 31.0004] },
+  { id: 'ismailia', en: 'Ismailia', ar: 'الإسماعيلية', centre: [30.5965, 32.2715] },
+  { id: 'kafr-el-sheikh', en: 'Kafr El Sheikh', ar: 'كفر الشيخ', centre: [31.1107, 30.9388] },
+  { id: 'luxor', en: 'Luxor', ar: 'الأقصر', centre: [25.6872, 32.6396] },
+  { id: 'matrouh', en: 'Matrouh', ar: 'مطروح', centre: [31.3543, 27.2373] },
+  { id: 'minya', en: 'Minya', ar: 'المنيا', centre: [28.1099, 30.7503] },
+  { id: 'monufia', en: 'Monufia', ar: 'المنوفية', centre: [30.5586, 31.01] },
+  { id: 'new-valley', en: 'New Valley', ar: 'الوادي الجديد', centre: [25.439, 30.5586] },
+  { id: 'north-sinai', en: 'North Sinai', ar: 'شمال سيناء', centre: [31.1316, 33.7984] },
+  { id: 'port-said', en: 'Port Said', ar: 'بورسعيد', centre: [31.2653, 32.3019] },
+  { id: 'qalyubia', en: 'Qalyubia', ar: 'القليوبية', centre: [30.466, 31.1848] },
+  { id: 'qena', en: 'Qena', ar: 'قنا', centre: [26.1551, 32.716] },
+  { id: 'red-sea', en: 'Red Sea', ar: 'البحر الأحمر', centre: [27.2579, 33.8116] },
+  { id: 'sharqia', en: 'Sharqia', ar: 'الشرقية', centre: [30.5877, 31.502] },
+  { id: 'sohag', en: 'Sohag', ar: 'سوهاج', centre: [26.5591, 31.6957] },
+  { id: 'south-sinai', en: 'South Sinai', ar: 'جنوب سيناء', centre: [28.241, 33.6222] },
+  { id: 'suez', en: 'Suez', ar: 'السويس', centre: [29.9668, 32.5498] },
 ];
 const AREA_GOV = {
   Mohandessin: 'giza', Dokki: 'giza', Agouza: 'giza', Giza: 'giza', Haram: 'giza', Faisal: 'giza',
@@ -48,9 +75,16 @@ const AREA_CENTRE = {
   Maadi: [29.9602, 31.2569], 'Sheikh Zayed': [30.0444, 30.9776], '6th of October': [29.9285, 30.9188], 'New Cairo': [30.0301, 31.4731],
 };
 
-export const AREAS = [...content.areas_near, ...content.areas_more].map((a) => ({
+const LISTED = [...content.areas_near, ...content.areas_more].map((a) => ({
   id: a.en, en: a.en, ar: a.ar, km: a.km_from_club, gov: AREA_GOV[a.en] || 'giza', centre: AREA_CENTRE[a.en],
 }));
+// The sample data only lists areas in Giza and Cairo. Every other governorate
+// is offered as a single area of its own name, so anyone in Egypt can enter.
+export const AREAS = [
+  ...LISTED,
+  ...GOVERNORATES.filter((g) => !LISTED.some((a) => a.gov === g.id))
+    .map((g) => ({ id: 'gov-' + g.id, en: g.en, ar: g.ar, km: null, gov: g.id, centre: g.centre, wholeGov: true })),
+];
 export const areaById = (id) => AREAS.find((a) => a.id === id) || null;
 export const govById = (id) => GOVERNORATES.find((g) => g.id === id) || null;
 
@@ -226,8 +260,8 @@ export function nearestArea(lat, lon) {
     const d = distKm([lat, lon], a.centre);
     if (d < bestD) { bestD = d; best = a; }
   });
-  // Far outside Greater Cairo, no area is a sensible guess.
-  return bestD <= 60 ? best : null;
+  // Outside Egypt, no area is a sensible guess.
+  return bestD <= 300 ? best : null;
 }
 
 export function requestLocationOnce() {
